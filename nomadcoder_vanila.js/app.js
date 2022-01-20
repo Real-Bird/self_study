@@ -1,11 +1,37 @@
-function add(){
-    let c = a + b
-    console.log(c)    
+// funcion 이해하기
+
+function sayHello() {
+    console.log("Hello World!");
 }
 
-let a = document.getElementById("num_1")
-let b = document.getElementById("num_2")
+sayHello();
+console.log("hi");
+sayHello("jin");
 
-let d = document.getElementById("btn")
+function sayHi(nameOfPerson, age) {
+    console.log("Hi, my name is " + nameOfPerson + " and I'm " + age);
+}
 
-d.addEventListener("click", add)
+sayHi("Jin");
+sayHi("cen", 12);
+
+function plus(firstNumber, secondNumber) {
+    console.log(firstNumber + secondNumber);
+}
+
+function divide(a, b){
+    console.log(a / b);
+}
+
+plus();
+plus(8, 60);
+divide(128, 2);
+
+const player = {
+    name : "jin",
+    sayHello : function(otherPersonsName){
+        console.log("hello " + otherPersonsName + " nice to meet you");
+    }
+}
+console.log(player.name);
+player.sayHello("lynn");
