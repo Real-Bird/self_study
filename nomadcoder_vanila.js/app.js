@@ -85,3 +85,23 @@ console.log("minus = ", minusResult);
 console.log("multiple = ", multiResult);
 console.log("divide = ", divideResult);
 console.log("power = ", powerResult);
+console.log("-------------------------------------");
+
+const yourAge = parseInt(prompt("How old are you?"));
+//console.log(typeof "15", typeof parseInt("15"));
+//console.log(yourAge, parseInt(yourAge));
+console.log(yourAge);
+
+console.log(isNaN(yourAge));
+
+if(isNaN(yourAge) || yourAge < 0) {
+    console.log("Please write a real positive number");
+} else if(yourAge < 18) {
+    console.log("You are too young");
+} else if(yourAge >= 18 && yourAge <= 50){
+    console.log("You can drink");
+} else if(yourAge > 50 && yourAge <= 80) { 
+    console.log("You should exercise");
+} else if (yourAge > 80) {
+    console.log("You can do whatever you want");
+} 
