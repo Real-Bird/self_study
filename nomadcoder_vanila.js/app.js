@@ -1,12 +1,21 @@
-// const title = document.getElementById("title");
-// title.innerText = "Got you!";
-// console.log(title.id);
-// console.log(title.className);
+const h1 = document.querySelector("div.hello h1");
 
-// const title = document.getElementsByClassName("hello");
-// console.log(title);
-const title = document.querySelector(".hello h1");
-// const title = document.querySelectorAll(".hello h1:first-child");
-console.log(title);
+// function handleTitleClick(){
+//     const clickedClass = "active";
+//     // if (h1.className === clickedClass){
+//     //     h1.className = "";    
+//     // } else{
+//     //     h1.className = clickedClass;
+//     // }
+//     if (h1.classList.contains(clickedClass)){
+//         h1.classList.remove(clickedClass);    
+//     } else{
+//         h1.classList.add(clickedClass);
+//     }
+// }
 
+function handleTitleClick(){
+    h1.classList.toggle("active");
+}
 
+h1.addEventListener("click", handleTitleClick);
