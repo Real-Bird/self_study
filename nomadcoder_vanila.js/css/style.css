@@ -12,6 +12,16 @@
     animation: fadeIn 0.5s linear;
 }
 
+html{
+    position:relative;
+    min-height: 100%;
+}
+
+html,body{
+    margin:0;
+    padding:0;
+}
+
 #login-form {
     position: absolute;
     top: 50%;
@@ -29,14 +39,18 @@ input.input-holder {
 }
 
 #greeting {
-    top: 20%;
+    top: 30%;
+    margin-bottom: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 80px;
     text-align: center;
+    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+    color: white;
 }
 
 .todo-sect {
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -44,7 +58,7 @@ input.input-holder {
 }
 
 .todo-sect>#todo-form>input {
-    width: 300px;
+    width: 358px;
     height: 60px;
     text-align: center;
     border-radius: 20px;
@@ -66,12 +80,12 @@ ul>li>span {
 }
 
 ul {
-    min-width: 265px;
+    width: 325px;
     min-height: 60px;
 }
 
 #delBtn {
-    padding-right: 35px;
+    padding-right: 40px;
     float: right;
     font-size: 5px;
     background: none;
@@ -80,4 +94,31 @@ ul {
 
 .cancle {
     text-decoration: line-through;
+    color: #d3d3d3;
+}
+
+
+#quote {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;   
+    height:100px;
+}
+
+#quote>span:first-child {
+    font-family: fantasy;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: -1px 0 #dedede, 0 1px #dedede, 1px 0 #dedede, 0 -1px #dedede;
+    color: grey;
+}
+
+#quote>span:last-child {
+    font-family: fantasy;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: -1px 0 #dedede, 0 1px #dedede, 1px 0 #dedede, 0 -1px #dedede;
+    color: grey;
 }

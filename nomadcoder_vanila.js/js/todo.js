@@ -37,14 +37,11 @@ function paintToDo(newTodo){
     li.appendChild(span);
     li.appendChild(btn);
     toDoList.appendChild(li);
-    chBox.addEventListener("click", addCancle);
+    chBox.onclick = function (){
+        const cancleLi = document.getElementById(`${li.id}`)
+        cancleLi.classList.toggle(CANCLE)
+    }
 }
-
-function addCancle(){
-    const liSpan = document.querySelector('li>span');
-    liSpan.classList.toggle(CANCLE);
-}
-
 
 function handleToDoSubmit(event) {
     event.preventDefault();
