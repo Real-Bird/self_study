@@ -1,9 +1,11 @@
+const toDoDiv = document.querySelector(".todo-sect");
 const toDoForm = document.getElementById("todo-form");
 const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
-
+toDoDiv.appendChild(toDoList);
 const TODOS_KEY = "todos";
 const CANCLE = "cancle";
+
 let toDos = [];
 
 if (localStorage.getItem(USERNAME_KEY) == null){
@@ -31,7 +33,7 @@ function paintToDo(newTodo){
     span.innerText = newTodo.text;
     const btn = document.createElement("button");
     btn.innerText = "❌";
-    btn.id = "delBtn";
+    btn.className = "delBtn";
     btn.addEventListener("click", deleteToDo);
     li.appendChild(chBox);
     li.appendChild(span);
