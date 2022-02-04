@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div id="root"></div>
+</body>
+<script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<script type="text/babel">
+    // const root = document.getElementById("root");
+    // const Title = <h3 id="title" onMouseEnter={() => console.log("mouse enter")}>Hello I'm a title</h3>
+    // function Title() {
+    //     return (<h3 id="title" onMouseEnter={() => console.log("mouse enter")}>Hello I'm a title</h3>);
+    // } // 중괄호는 return 없음을 전제, 결과값 받으려면 return 필수
+        
+    // const Button = () => (
+    //     <button style={{backgroundColor: "tomato"}} onClick={() => console.log('im click')}>Click me</button>); // 소괄호는 return을 전제
+    // const h3 = React.createElement("h3",{
+    //     onMouseEnter: () => console.log("mouse enter"),
+    // },"Hello I'm span");
+    // const button = React.createElement("button",{
+    //     onClick: () => console.log('im click'),
+    // },"Click me");
+    // const container = React.createElement("div", null, [Title, Button]);
+    // let counter = 0;
+    // function countUp(){
+    //     counter = counter + 1;
+    //     render();
+    // }
+    // function render(){
+    //     ReactDOM.render(<Container />, root);
+    // }
+    // const Container = () => (
+    //     // <div>
+    //     //     <Title />
+    //     //     <Button />
+    //     // </div>;
+    //     <div>
+    //         <h3>Total clicks: {counter}</h3>
+    //         <button onClick={countUp}>Click me</button>
+    //         </div>
+    // );
+    // render();
+    const root = document.getElementById("root");
+    function App() {
+        const [counter, setCounter] = React.useState(0);
+        const onClick = () => {
+            // setCounter(counter + 1);
+            setCounter((current) => current + 1);
+        }
+        return (
+            <div>
+                <h3>Total clicks: {counter}</h3>
+                <button onClick={onClick}>Click me</button>
+            </div>
+            );
+    }
+    ReactDOM.render(<App />, root);
+</script>
+
+</html>
