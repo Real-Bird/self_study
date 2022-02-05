@@ -8,22 +8,22 @@ const CANCLE = "cancle";
 
 let toDos = [];
 
-if (localStorage.getItem(USERNAME_KEY) == null){
+if (localStorage.getItem(USERNAME_KEY) == null) {
     toDoForm.classList.add(HIDDEN_CLASSNAME);
 }
 
-function saveToDos(){
+function saveToDos() {
     localStorage.setItem(TODOS_KEY, JSON.stringify(toDos));
 }
 
-function deleteToDo(event){
+function deleteToDo(event) {
     const li = event.target.parentElement;
     li.remove();
     toDos = toDos.filter((toDo) => toDo.id !== parseInt(li.id));
     saveToDos();
 }
 
-function paintToDo(newTodo){
+function paintToDo(newTodo) {
     const chBox = document.createElement("input");
     chBox.class = "chbox";
     chBox.type = "checkbox";
@@ -39,7 +39,8 @@ function paintToDo(newTodo){
     li.appendChild(span);
     li.appendChild(btn);
     toDoList.appendChild(li);
-    chBox.onclick = function (){
+    toDoList.scrollTop = toDoList.scrollHeight;
+    chBox.onclick = function () {
         const cancleLi = document.getElementById(`${li.id}`)
         cancleLi.classList.toggle(CANCLE)
     }
@@ -50,8 +51,8 @@ function handleToDoSubmit(event) {
     const newTodo = toDoInput.value;
     toDoInput.value = "";
     const newToDoObj = {
-        text:newTodo,
-        id:Date.now(),
+        text: newTodo,
+        id: Date.now(),
     }
     toDos.push(newToDoObj);
     paintToDo(newToDoObj);

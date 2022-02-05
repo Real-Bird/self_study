@@ -13,7 +13,7 @@ function getFullDate() {
     const year = String(toDayDate.getFullYear());
     const month = String(toDayDate.getMonth() + 1);
     const day = String(toDayDate.getDay());
-    fullDate.innerText = `${year}년 ${month}월 ${day}일`;
+    fullDate.innerText = `${year}-${month}-${day}`;
 }
 
 function getClock() {

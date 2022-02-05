@@ -3,6 +3,7 @@ const loginInput = document.querySelector("#login-form input");
 const greeting = document.querySelector("#greeting");
 const toDoTable = document.querySelector("#todo-form");
 const toDoLi = document.querySelector('#todo-list');
+const toDoSect = document.querySelector("#todo-sect");
 const HIDDEN_CLASSNAME = "hidden";
 const USERNAME_KEY = "username";
 const logOutBtn = document.createElement("button");
@@ -17,7 +18,7 @@ function onLoginSubmit(event) {
     paintGreeings(username);
 }
 
-function paintGreeings(username){
+function paintGreeings(username) {
     const br = document.createElement('br');
     greeting.innerText = `Hello, ${username}!`;
     greeting.appendChild(br);
@@ -25,6 +26,7 @@ function paintGreeings(username){
     greeting.classList.remove(HIDDEN_CLASSNAME);
     toDoTable.classList.remove(HIDDEN_CLASSNAME);
     toDoLi.classList.remove(HIDDEN_CLASSNAME);
+    toDoSect.classList.add("todo-sect");
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
@@ -33,9 +35,10 @@ if (savedUsername === null) {
     loginForm.addEventListener("submit", onLoginSubmit);
     toDoTable.classList.add(HIDDEN_CLASSNAME);
     toDoLi.classList.add(HIDDEN_CLASSNAME);
+    toDoSect.classList.remove("todo-sect");
 } else {
     paintGreeings(savedUsername);
-    
+
 }
 logOutBtn.addEventListener("click", handleLogOut);
 function handleLogOut() {
@@ -44,6 +47,8 @@ function handleLogOut() {
     toDoTable.classList.add(HIDDEN_CLASSNAME);
     toDoLi.classList.add(HIDDEN_CLASSNAME);
     loginForm.classList.remove(HIDDEN_CLASSNAME);
-    loginInput.value=null;
+    toDoSect.classList.remove("todo-sect");
+    toDoSect.classList.add(HIDDEN_CLASSNAME);
+    loginInput.value = null;
     loginInput.focus();
 }

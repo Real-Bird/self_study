@@ -1,175 +1,211 @@
 .hidden {
-    display: none;
+  display: none;
 }
 
 .bgImg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    animation: fadeIn 0.5s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
 }
 
-html{
-    position:relative;
-    min-height: 100%;
+html {
+  position: relative;
+  min-height: 100%;
 }
 
-html,body{
-    margin:0;
-    padding:0;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
 .copy {
-    float: right;
+  float: right;
 }
 
 #login-form {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 input.input-holder {
-    width: 300px;
-    height: 60px;
-    text-align: center;
-    border-radius: 20px;
-    font-size: large;
-    font-weight: bold;
+  width: 300px;
+  height: 60px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: bold;
 }
 
-
 .todo-sect {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 600px;
-    transform: translate(-50%, -50%);
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;
-    align-content: center;
-    align-items: center;
-    flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  transform: translate(-50%, -50%);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1;
 }
 
 #greeting {
-    top: 30%;
-    margin-bottom: 20px;
-    min-width: 300px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 80px;
-    text-align: center;
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-    color: white;
-    line-height: 50px;
+  display: flex;
+  top: 30%;
+  margin-bottom: 20px;
+  min-width: 300px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 10vmin;
+  text-align: center;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  color: white;
+  flex-direction: column;
+  align-items: center;
 }
 
-.todo-sect>#todo-form>input {
-    width: 358px;
-    height: 60px;
-    text-align: center;
-    border-radius: 20px;
-    font-size: large;
-    font-weight: bold;
-    align-items: center;
+.todo-sect > #todo-form > input {
+  width: 358px;
+  height: 60px;
+  text-align: center;
+  border-radius: 20px;
+  font-size: large;
+  font-weight: bold;
+  align-items: center;
 }
 
 #todo-list {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    border: 1px dashed beige;
-    border-radius: 10px;
-    background-color: beige;
-    list-style-type: none;
-    margin: 20px 25%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  border: 1px dashed beige;
+  border-radius: 10px;
+  background-color: beige;
+  list-style-type: none;
+  margin: 20px 25%;
+  max-height: 120px;
+  flex: 1;
+  overflow: auto;
+  transform-origin: right bottom;
 }
 
-ul>li>span {
-    padding: 0 5px 0 10px;
+#todo-list::-webkit-scrollbar {
+  display: none;
+}
+
+#todo-list::-webkit-scrollbar-thumb {
+  background-color: black;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+
+#todo-list::-webkit-scrollbar-track {
+  background-color: gainsboro;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
+
+ul > li > span {
+  padding: 0 5px 0 10px;
 }
 
 ul {
-    width: 325px;
-    min-height: 60px;
+  width: 325px;
+  min-height: 120px;
 }
 
 .delBtn {
-    padding-right: 40px;
-    float: right;
-    font-size: 5px;
-    background: none;
-    border: none;
+  margin-right: 10px;
+  padding-right: 40px;
+  float: right;
+  font-size: 5px;
+  background: none;
+  border: none;
 }
 
 .cancle {
-    text-decoration: line-through;
-    color: #d3d3d3;
+  text-decoration: line-through;
+  color: #d3d3d3;
 }
 
 .logoutbtn {
-    border: 3px solid #dedede; 
-    background-color: rgba(0,0,0,0); 
-    color:  #dedede; 
-    padding: 5px;
+  border: 3px solid #dedede;
+  background-color: rgba(0, 0, 0, 0);
+  color: #dedede;
+  padding: 5px;
 }
-
 
 #quote {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;   
-    height:100px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: 100px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
 }
 
-#quote>span:first-child {
-    font-family: fantasy;
-    font-size: 25px;
-    font-weight: bold;
-    text-shadow: -1px 0 #dedede, 0 1px #dedede, 1px 0 #dedede, 0 -1px #dedede;
-    color: grey;
+#quote > span:first-child {
+  font-family: fantasy;
+  font-size: 25px;
+  font-weight: bold;
+  text-shadow: -1px 0 #dedede, 0 1px #dedede, 1px 0 #dedede, 0 -1px #dedede;
+  color: grey;
 }
 
-#quote>span:last-child {
-    font-family: fantasy;
-    font-size: 15px;
-    font-weight: bold;
-    font-style: italic;
-    text-shadow: -1px 0 #dedede, 0 1px #dedede, 1px 0 #dedede, 0 -1px #dedede;
-    color: grey;
+#quote > span:last-child {
+  font-family: fantasy;
+  font-size: 15px;
+  font-weight: bold;
+  font-style: italic;
+  text-shadow: -1px 0 #dedede, 0 1px #dedede, 1px 0 #dedede, 0 -1px #dedede;
+  color: grey;
 }
 
 #widget {
-    position: absolute;
-    top: 5%;
-    left: 10%;
-    min-width: 220px;
-    text-align: center;
-    padding-bottom: 20px;
-    background-image: url('../img/memo.png');
-    background-repeat : no-repeat;
-    background-size : cover;
+  position: static;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-start;
+  height: 60px;
+  padding-inline: 40px;
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  color: white;
+  text-align: center;
 }
 
 h2#fulldate {
-    margin-top: 50px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 120px;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
 h3#clock {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .icon {
-    width: 30px;
-    height: 30px;
+  width: 50px;
+  height: 50px;
+}
+
+#weather {
+  display: flex;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 .weather {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
-    ;
+  text-align: center;
+  margin-block: 10%;
 }
