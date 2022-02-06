@@ -12,7 +12,7 @@ function getFullDate() {
     const toDayDate = new Date();
     const year = String(toDayDate.getFullYear());
     const month = String(toDayDate.getMonth() + 1);
-    const day = String(toDayDate.getDay());
+    const day = String(toDayDate.getDate());
     fullDate.innerText = `${year}-${month}-${day}`;
 }
 
