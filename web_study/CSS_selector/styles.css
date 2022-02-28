@@ -1,0 +1,56 @@
+* {
+  margin: 5px;
+}
+
+html {
+  height: 100%;
+  background-color: #fcf3cf;
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  border: 2px dotted red;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+nav div {
+  background-color: brown;
+  width: 50px;
+  height: 30px;
+  color: aliceblue;
+}
+
+nav div:first-child {
+  color: black;
+}
+
+nav div:last-child {
+  color: blue;
+}
+
+div {
+  color: crimson;
+}
+
+.div {
+  background-color: burlywood;
+}
+
+#div {
+  background-color: aquamarine;
+}
+
+main:nth-child(2n + 1) {
+  background-color: blueviolet;
+}
+
+.con[id="center"] {
+  background-color: black;
+}
+
+.con:not([id="center"]) {
+  background-color: green;
+}
