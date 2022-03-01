@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="container">
+    <form id="form">
+      <input id="input" type="text" />
+      <input type="submit" value="submit" />
+    </form>
+    <p class="text"></p>
+  </div>
+  <div id="typing"></div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  const chMd = document.querySelector("#input");
+  const form = document.querySelector("#form");
+  const p = document.querySelector("p");
+  const onSubmit = (e) => {
+    e.preventDefault();
+    const newText = chMd.value;
+    p.innerHTML = marked.parse(newText);
+  };
+  form.addEventListener("submit", onSubmit);
+
+  const typing = document.querySelector("#typing");
+  typing.innerHTML = marked.parse('# CSS(Cascading Style Sheets)\n\n**CSS**는 HTML의 요소의 모양을 정의하여 어떻게 화면에 렌더링할 것인지 브라우저에게 설명하는 언어이다.\n\n**HTML5** 이전에도 style 정의가 가능한 태그(`<font>`, `<center>` 등)가 존재하였으나, 내용(content)와 구조(structure)라는 HTML 본연의 기능과 동떨어진 탓에 혼란만 가중되었다. 그에 따라 **HTML5**부터는 각각의 기능에 충실하는 언어로 확실히 구분되었다. **HTML**은 *정보*와 *구조화*를, **CSS**는 *style 정의*를 담당한다.\n\n현재 **CSS**의 버전은 **CSS3**이다.\n\n## CSS 문법\n\nCSS의 전체 구조를 **rule set(이하 rule)**이라고 한다. 그 안에는 각각 역할에 대한 명칭이 있다.\n\n![MDN에서 퍼온 rule set 이미지]("https://poiemaweb.com/img/css-syntax.png")\n\n### (1) 셀렉터(Selector, 선택자)\n\n**rule**의 맨 앞에 있는 것으로, **HTML** 요소를 선택한다. **셀렉터**를 통해 다른 요소를 꾸밀 수 있다.\n\n### (2) 프로퍼티(Property, 속성)\n\n*중괄호{ }*를 통해')
+</script>
+
+</html>
