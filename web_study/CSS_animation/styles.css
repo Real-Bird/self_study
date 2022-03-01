@@ -1,0 +1,40 @@
+body {
+  position: relative;
+  overflow: hidden;
+}
+
+.nonclick {
+  position: absolute;
+  border: 2px solid black;
+  background-color: bisque;
+  width: 200px;
+  height: 200px;
+  animation: slicing 1 linear 10s;
+}
+
+.hidden {
+  display: none;
+}
+
+/* .click {
+  animation: slicing 1 linear 10s;
+} */
+
+@keyframes slicing {
+  0% {
+    opacity: 0;
+    left: 0;
+  }
+  /*30% {
+    opacity: 0.5;
+    transform: translateX(40px);
+  }
+  70% {
+    opacity: 0.7;
+    transform: translateX(70px);
+  } */
+  100% {
+    opacity: 1;
+    left: 100%;
+  }
+}

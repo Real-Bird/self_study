@@ -54,3 +54,11 @@ main:nth-child(2n + 1) {
 .con:not([id="center"]) {
   background-color: green;
 }
+
+[name] {
+  width: 30px;
+  height: 30px;
+  border: 3px solid black;
+  border-radius: 100%;
+  background-color: darkcyan;
+}
