@@ -8,14 +8,13 @@ const nextBtn = document.querySelector(".nextbtn");
 let date = new Date();
 
 function renderingDate() {
-
   const currentYear = date.getFullYear();
   const currentMonth = date.getMonth();
 
-  yearMonth.innerText = `${currentYear}년 ${currentMonth + 1}월`
+  yearMonth.innerText = `${currentYear}년 ${currentMonth + 1}월`;
 
-  const preLastDate = new Date(currentYear, currentMonth, 0)
-  const thisLastDate = new Date(currentYear, currentMonth + 1, 0)
+  const preLastDate = new Date(currentYear, currentMonth, 0);
+  const thisLastDate = new Date(currentYear, currentMonth + 1, 0);
 
   // 지난 달 마지막 일과 요일
   const PLday = preLastDate.getDate();
@@ -24,7 +23,6 @@ function renderingDate() {
   // 이번 달 마지막 일과 요일
   const TLday = thisLastDate.getDate();
   const TLweek = thisLastDate.getDay();
-
 
   const preDays = []; // 지난 달 남는 일자 담기
   const thisDays = [...Array(TLday + 1).keys()].slice(1); // 이번 달 일자 담기
@@ -51,25 +49,27 @@ function renderingDate() {
 
   // 이번 달과 아닌 달 클래스 구분(CSS 위함)
   dates.forEach((date, i) => {
-    const condition = i >= firstDateIndex && i < lastDateIndex + 1
-      ? 'this'
-      : 'other';
+    const condition =
+      i >= firstDateIndex && i < lastDateIndex + 1 ? "this" : "other";
     dates[i] = `<div class="day ${condition} non-click">${date}</div>`;
-  })
+  });
 
   // 날짜 추가
-  document.querySelector('.days').innerHTML = dates.join('');
+  document.querySelector(".days").innerHTML = dates.join("");
 
   // 오늘 날짜 강조 CSS 위한 변수 초기화
   const today = new Date();
 
   // 이번 달과 연도가 오늘 일자의 달, 연도와 같으면 'this' 클래스의 date 뽑아냄
-  if (currentMonth === today.getMonth() && currentYear === today.getFullYear()) {
-    for (let date of document.querySelectorAll('.this')) {
+  if (
+    currentMonth === today.getMonth() &&
+    currentYear === today.getFullYear()
+  ) {
+    for (let date of document.querySelectorAll(".this")) {
       // +date = 타입을 number로 캐스팅해주는 단항 연산자
       // date 태그의 텍스트와 오늘 일자가 같으면 'today' 클래스 추가하고 반복문 탈출
       if (+date.innerText === today.getDate()) {
-        date.classList.add('today');
+        date.classList.add("today");
         break;
       }
     }
@@ -116,7 +116,7 @@ function handleClick(event) {
   // }
   nonClick.forEach((e) => {
     e.classList.remove("click");
-  })
+  });
   event.target.classList.add("click");
   // 클릭한 div만 "click"클래스 추가
 }
@@ -127,4 +127,4 @@ function handleClick(event) {
 
 nonClick.forEach((e) => {
   e.addEventListener("click", handleClick);
-})
+});
