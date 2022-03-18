@@ -6,4 +6,5 @@
 *.xml
 *.json
 *.exe
+*.jpg
 .env
