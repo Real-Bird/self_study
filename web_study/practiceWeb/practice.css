@@ -1,0 +1,22 @@
+#wrap {
+  position: relative;
+}
+
+#wrap div:nth-child(even) {
+  height: 120px;
+  background: darkgoldenrod;
+}
+
+#wrap div:nth-child(odd) {
+  height: 150px;
+  background: darkgreen;
+}
+
+.item1,
+.item2,
+.item3,
+.item4,
+.item5 {
+  position: absolute;
+  width: 600px;
+}
