@@ -137,6 +137,82 @@ span.next_btn {
   background-position: -34px 0;
 }
 
+/* 최근 글, 인기 글 */
+.latest_post_section {
+  order: 4;
+  background: #ffc40f;
+  text-shadow: 0px 1px 1px #b98e0b;
+}
+
+.popular_post_section {
+  order: 5;
+  background: #a660c2;
+  text-shadow: 0px 1px 1px #714185;
+}
+
+.latest_post_section,
+.popular_post_section {
+  padding: 40px 12.5%;
+  padding: 2.5rem 12.5%;
+}
+
+.title {
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+  font-size: 1.188em;
+  font-size: 1.188rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.latest_post_section li,
+.popular_post_section li {
+  margin-top: 15px;
+  margin-top: 0.938rem;
+  padding-left: 14px;
+  padding-left: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: url(../img/s_img/post_circle_icon.png) left center no-repeat;
+}
+
+.latest_post_section li:first-child,
+.popular_post_section li:first-child {
+  margin-top: 0;
+}
+
+/* 갤러리 영역 */
+.gallery_section {
+  order: 6;
+  padding: 50px 12.5%;
+  padding: 3.125rem 12.5%;
+  text-align: center;
+  background: #e65d5d;
+  text-shadow: 0px 1px 1px #c43434;
+}
+
+.gallery_section img {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 3px;
+  box-shadow: 0px 1px 1px #c43434;
+}
+
+.gallery_list li:nth-child(2) {
+  margin-top: 30px;
+  margin-top: 1.875rem;
+}
+
+.gallery_list li figcaption {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  font-size: 1.188em;
+  font-size: 1.188rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
 /* 태블릿용 */
 @media all and (min-width: 768px) {
   /* 기본 */
@@ -195,6 +271,42 @@ span.next_btn {
   .slider_section span {
     position: relative;
     z-index: 10;
+  }
+
+  /* 최근 글, 인기 글 */
+  .latest_post_section {
+    order: 5;
+  }
+
+  .popular_post_section {
+    order: 6;
+  }
+
+  .latest_post_section,
+  .popular_post_section {
+    width: 41.666666666666667%;
+    padding-left: 5.208333333333333%;
+    padding-right: 5.208333333333333%;
+  }
+
+  /* 갤러리 영역 */
+  .gallery_section {
+    order: 8;
+    width: 71.354166666666667%;
+    padding-left: 5.208333333333333333%;
+    padding-right: 5.208333333333333333%;
+  }
+
+  .gallery_list {
+    display: flex;
+  }
+
+  .gallery_list li {
+    width: 47.008547008547008547008547%;
+  }
+  .gallery_list li:nth-child(2) {
+    margin-left: 5.982905982905982905982905982906%;
+    margin-top: 0;
   }
 }
 /* PC용 */
@@ -275,5 +387,35 @@ span.next_btn {
   .slider_section {
     order: 2;
     width: 50%;
+  }
+
+  /* 최근 글, 인기 글 */
+  .latest_post_section,
+  .popular_post_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* 갤러리 영역 */
+  .gallery_section {
+    order: 3;
+    width: 27.0833333333%;
+  }
+
+  .gallery_list {
+    display: block;
+  }
+
+  .gallery_list li {
+    width: auto;
+  }
+  .gallery_list li:nth-child(2) {
+    margin-top: 30px;
+    margin-top: 1.875rem;
+    margin-left: 0;
   }
 }
