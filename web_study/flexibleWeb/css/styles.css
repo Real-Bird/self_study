@@ -12,11 +12,189 @@
   box-sizing: border-box;
 }
 
+/* 인포메이션 */
+.info_section {
+  order: 1;
+  width: 100%;
+  background: #2ecc71;
+  border-bottom: 1px solid #39d67c;
+}
+
+.info_list {
+  display: flex;
+}
+
+.info_list li {
+  width: 20%;
+  text-align: center;
+}
+
+.info_list li a {
+  display: block;
+  padding: 15px 0;
+  padding: 0.938rem 0;
+}
+
+/* 헤더 */
+.header {
+  display: flex;
+  order: 2;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.logo {
+  order: 1;
+  width: 100%;
+  padding: 30px 0;
+  padding: 1.875rem 0;
+  font-size: 1.188em;
+  font-size: 1.188rem;
+  line-height: 21px;
+  line-height: 1.313rem;
+  text-align: center;
+  text-transform: uppercase;
+  background: #2ecc71;
+  text-shadow: 0px 1px 1px #25ab5e;
+}
+
+.nav {
+  order: 2;
+  width: 100%;
+}
+
+.gnb li {
+  display: flex;
+  background: #2c3e50;
+}
+
+.gnb li a {
+  width: 80%;
+  padding: 20px 0;
+  padding: 1.25rem 0;
+  font-size: 0.938em;
+  font-size: 0.938rem;
+  text-indent: 20px;
+  text-indent: 1.25rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.gnb li span {
+  width: 20%;
+  text-indent: -9999px;
+  background: url(../img/s_img/sub_menu_toggle_btn.png) center center no-repeat;
+  cursor: pointer;
+}
+
+.menu_toggle_btn {
+  display: block;
+  width: 30px;
+  width: 1.875rem;
+  height: 30px;
+  height: 1.875rem;
+  position: absolute;
+  top: 10px;
+  top: 0.625rem;
+  right: 10px;
+  right: 0.625rem;
+  background: url(../img/s_img/menu_toggle_btn.png) no-repeat;
+  cursor: pointer;
+}
+
+/* 슬라이더 */
+.slider_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  order: 3;
+  width: 100%;
+  height: 300px;
+  height: 18.75rem;
+  background: url(../img/p_img/slider_01.jpg) center center no-repeat;
+}
+
+.slider_section span {
+  width: 34px;
+  width: 2.215rem;
+  height: 39px;
+  height: 2.438rem;
+  text-indent: -9999px;
+  background: url(../img/s_img/slider_arrow.png) no-repeat;
+  cursor: pointer;
+}
+
+span.prev_btn {
+  margin-left: -10px;
+  margin-left: -0.625rem;
+  background-position: 0 0;
+}
+
+span.next_btn {
+  margin-right: -10px;
+  margin-right: -0.625rem;
+  background-position: -34px 0;
+}
+
 /* 태블릿용 */
 @media all and (min-width: 768px) {
   /* 기본 */
   #wrap {
     flex-flow: row wrap;
+  }
+  /* 헤더 */
+  .header {
+    flex-direction: row;
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 15.625%;
+    padding: 0;
+  }
+
+  .logo a {
+    display: block;
+    padding: 50px 0;
+    padding: 3.125rem 0;
+  }
+
+  .nav {
+    position: relative;
+    min-height: 80px;
+    min-height: 5rem;
+    background: #2ecc71;
+  }
+
+  .gnb {
+    position: absolute;
+    top: 100%;
+    right: 0%;
+    z-index: 20;
+    width: 40.104166666667%;
+  }
+
+  .menu_toggle_btn {
+    top: 50%;
+    right: 30px;
+    z-index: 20;
+    margin-top: -15px;
+    margin-top: -0.938rem;
+  }
+
+  /* 슬라이더 */
+  .slider_section {
+    width: 59.89583333333%;
+    height: auto;
+  }
+
+  .slider_section span {
+    position: relative;
+    z-index: 10;
   }
 }
 /* PC용 */
@@ -25,5 +203,77 @@
   #wrap {
     position: relative;
     width: 90%;
+  }
+  /* 인포메이션 */
+  .info_section {
+    order: 0;
+    position: absolute;
+    top: 30px;
+    top: 1.875rem;
+    right: 30px;
+    right: 1.875rem;
+    z-index: 30;
+    width: auto;
+    border-bottom: 0;
+  }
+
+  .info_list li {
+    width: auto;
+    margin-left: 15px;
+    margin-left: 0.625rem;
+  }
+
+  .info_list li a {
+    padding: 0;
+  }
+
+  /* 헤더 */
+  .header {
+    order: 1;
+    justify-content: flex-end;
+    position: static;
+  }
+
+  .logo {
+    width: 12.5%;
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    position: static;
+    width: 87.5%;
+  }
+  .gnb {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    width: 100%;
+    text-shadow: 0px 1px 1px #25ab5e;
+  }
+  .gnb li {
+    display: block;
+    margin-left: 5.2083333333%;
+    background: none;
+  }
+
+  .gnb li a {
+    width: auto;
+    padding: 0;
+    text-indent: 0;
+  }
+
+  .gnb li span {
+    display: none;
+  }
+
+  .menu_toggle_btn {
+    display: none;
+  }
+
+  /* 슬라이더 */
+  .slider_section {
+    order: 2;
+    width: 50%;
   }
 }
