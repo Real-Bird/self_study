@@ -20,14 +20,14 @@ next_btn.addEventListener("click", () => {
 
 prev_btn.addEventListener("click", () => {
   if (currentIndex <= 0) {
-    img_box[slideCnt - 1].style.transform = `translateX(-${
-      100 * (slideCnt - 1)
-    }%)`;
     currentIndex = slideCnt - 1;
+    img_box[currentIndex].style.transform = `translateX(-${
+      100 * currentIndex
+    }%)`;
   } else {
     img_box[(currentIndex + 1) % slideCnt].style.transform = `translateX(-${
       100 * (currentIndex + 1)
     }%)`;
-    currentIndex -= 1;
   }
+  currentIndex -= 1;
 });
